@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import config from '../config'
 
 class NewTweet extends Component {
   constructor(props) {
@@ -38,6 +39,15 @@ class NewTweet extends Component {
   }
 
   addTweet(tweet) {
+    fetch(`http://${config.api.host}:${config.api.port}/api/tweets`, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      mode: 'cors',
+      body: JSON.stringify(tweet),
+    })
     this.props.addToTweetList(tweet)
     this.setState({
       tweetText: '',

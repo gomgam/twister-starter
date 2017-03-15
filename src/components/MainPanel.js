@@ -6,13 +6,13 @@ class MainPanel extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name: 'Supasate Choochaisri',
-      username: 'kaizerwing',
+      name: 'Sasiwimon Jiratchanon',
+      username: 'gomgam',
       tweets: [
         {
           id: 0,
-          name: 'Supasate Choochaisri',
-          username: 'kaizerwing',
+          name: 'Sasiwimon Jiratchanon',
+          username: 'gomgam',
           tweetText: 'Lorem Ipsum ...',
         },
         {
